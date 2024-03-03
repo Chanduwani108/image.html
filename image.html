@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image with Hover Text</title>
+<style>
+    /* Style for the image */
+    .image-container {
+        position: relative;
+        display: inline-block;
+        border: 3px solid orangered;
+        padding: 5px;
+    }
+    
+    /* Style for the text that appears on hover */
+    .image-container .hover-text {
+        visibility: hidden;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    /* Show the text on hover */
+    .image-container:hover .hover-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    /* Style for the image */
+    .image-container img {
+        height: 30px;
+        width: 30px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Container for the image -->
+<div class="image-container">
+    <!-- Image -->
+    <img src="Bridge.jpg" alt="Bridge" />
+    <!-- Text to display on hover -->
+    <div style="color: blueviolet;" class="hover-text"> i am Image in Webpage</div>
+</div>
+
+</body>
+</html>
